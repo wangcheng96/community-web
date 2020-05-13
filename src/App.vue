@@ -17,8 +17,9 @@ export default {
 }
 </script>
 <style lang="scss">
-@import 'assets/css/global.css';
-@import 'assets/css/layui-layer/layer.css';
+@import "assets/layui/css/layui.css";
+@import "assets/css/global.css";
+@import "assets/layui/css/modules/layer/default/layer.css";
 
 // 公用样式
 .svg {
