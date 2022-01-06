@@ -16,6 +16,8 @@ import VFooter from '@/components/footer/Footer.vue'
 <style lang="scss" scoped>
 .main {
   margin-top: 60px;
-  min-height: calc(100vh - 214px);
+  min-height: calc(100vh - 196px);
+  width: 1200px;
+  margin: 0 auto;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="home-container">
-    <div>首页</div>
+    <div>关于</div>
     <n-button type="primary">按钮</n-button>
-    <div>hello world!</div>
+    <div>hello world!{{value}}</div>
   </div>
 </template>
 
