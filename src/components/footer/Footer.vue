@@ -17,6 +17,7 @@
 
 <style lang="scss" scoped>
 .common-footer {
+  min-width: 1200px;
   margin: 0;
   padding: 20px 0 30px;
   line-height: 30px;

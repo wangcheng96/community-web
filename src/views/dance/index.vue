@@ -1,8 +1,6 @@
 <template>
   <div class="home-container">
-    <div>关于</div>
-    <n-button type="primary">按钮</n-button>
-    <div>hello world!{{value}}</div>
+    <div>舞、舞、舞</div>
   </div>
 </template>
 

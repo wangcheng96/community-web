@@ -1,12 +1,17 @@
 <template>
   <div class="common-header">
-    <n-menu class="header_menu" :default-value="activeKey" mode="horizontal" :options="menuOptions" />
+    <n-menu
+      class="header_menu"
+      v-model:value="activeKey"
+      mode="horizontal"
+      :options="menuOptions"
+      @update:value="keyChange"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-import { h } from 'vue'
-import { ref } from "@vue/reactivity";
+import { h, ref } from 'vue'
 import { NIcon } from 'naive-ui'
 import { RouterLink } from 'vue-router'
 import { BookOutline as BookIcon } from '@vicons/ionicons5'
@@ -22,7 +27,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'home',
+            name: 'wind',
             params: {
               lang: 'zh-CN'
             }
@@ -39,7 +44,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'home',
+            name: 'sea',
             params: {
               lang: 'zh-CN'
             }
@@ -56,7 +61,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'home',
+            name: 'chase',
             params: {
               lang: 'zh-CN'
             }
@@ -64,7 +69,7 @@ const menuOptions = [
         },
         { default: () => '想飞上天' }
       ),
-    key: 'a-wild-sheep-chase',
+    key: 'chase',
     icon: renderIcon(BookIcon),
   },
   {
@@ -73,7 +78,7 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'home',
+            name: 'dance',
             params: {
               lang: 'zh-CN'
             }
@@ -81,12 +86,16 @@ const menuOptions = [
         },
         { default: () => '舞，舞，舞' }
       ),
-    key: 'dance-dance-dance',
+    key: 'dance',
     icon: renderIcon(BookIcon)
   }
 ]
 
-let activeKey = ref('wind')
+const activeKey = ref('wind')
+
+const keyChange = (key: string) => {
+  console.warn(activeKey.value, key);
+}
 </script>
 
 <style lang="scss" scoped>

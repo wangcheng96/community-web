@@ -1,8 +1,6 @@
 <template>
   <div class="home-container">
-    <div>首页</div>
-    <n-button type="primary">按钮</n-button>
-    <div>hello world!</div>
+    <div>想飞上天</div>
   </div>
 </template>
 
